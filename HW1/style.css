@@ -20,11 +20,11 @@ li {
     float: left;
 }
 
-li a {
+li {
     display: inline-block;
-    color: white;
+    color: #CC8B9B;
     text-align: center;
-    padding: 14px 16px;
+    padding: 2% 10.9211111111%;
     text-decoration: none;
 }
 
