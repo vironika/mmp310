@@ -1,0 +1,72 @@
+/* css code goes here */
+
+
+body{background-color:beige;
+  font-family: helvetica;  
+ font-family: fantasy;}
+.words {
+   
+    max-width: 96%;
+    font-size: 22px;
+    padding: 1%;
+}
+
+img {
+    max-width: 540px;
+    padding: 3%;
+}
+/*#shy, #headshake{   visibility: hidden;}*/
+
+h1 {
+    padding-left: 5%;
+    color:chocolate;
+}
+
+.photos,
+.gifs {
+    width: 30%;
+    padding: 1%
+}
+
+#footer {
+    color: darkgrey;
+    text-align: center;
+    font-size: 12px;
+}
+
+#showButton {
+    
+    background-color:darkseagreen;
+}
+#showButton2{ background-color:darksalmon}
+
+.buttons{font-size: 18px;
+     font-family: fantasy;
+    margin-left: 20%;
+    
+}
+
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
