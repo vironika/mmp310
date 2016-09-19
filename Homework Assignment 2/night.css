@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#contactMe {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 100px;
+    background-color: #263988;
+    clear: both;
+}
+
+#email,
+#name {
+    width: 90%;
+    max-width: 400px;
+    display: block;
+    margin-bottom: 15px;
+    margin-top: 5px;
+}
+
+#submit {
+    background-color: black;
+    color: white;
+}
+
+body {
+    font-family: monospace;
+    font-size: 16px;
+    background-color: #4c5261;
+    color: aliceblue;
+}
+
+header {
+    background-color: black;
+    background-image: url(images/night.png);
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+}
+
+header img {
+    width: 100%;
+    height: 200px;
+}
+
+nav {
+    padding-top: 17.5%;
+}
+
+#main,
+#links,
+#web,
+#contactMe {
+    border-top: 4px solid black;
+}
+
+p,
+h2 {
+    padding: 4%;
+    margin-left: 4%;
+}
+
+#about,
+#web {
+    width: 100%;
+    clear: both;
+}
+
+#links {
+    float: left;
+    width: 100%;
+}
+
+#links li {
+    list-style-type: none;
+    text-decoration: underline;
+    color: white;
+    padding: 1%;
+    margin-left: 4%;
+}
+
+#links a:visited {
+    color: gainsboro;
+}
+
+#links a {
+    color: white;
+}
+
+#links h2 {
+    color: #f3faa4;
+    padding-top: 4%;
+    padding-bottom: 3%;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    padding-left: 20%;
+}
+
+nav li {
+    float: left;
+}
+
+nav li {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 0% 5%;
+    text-decoration: none;
+}
+
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+}
+
+ul.topnav li {
+    float: left;
+}
+
+ul.topnav li a {
+    font-weight: 600;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 10px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+ul.topnav li a:hover {
+    color: #c0c9dd;
+}
+
+ul.topnav li.icon {
+    display: none;
+}
+
+#about img {
+    padding: 7%;
+    width: 70%;
+}
+
+#about p {
+    float: left;
+    padding: 1%;
+}
+
+#links,
+#contactMe {
+    background-color: #263988;
+}
+
+@media screen and (max-width:680px) {
+    ul.topnav li {
+        display: none;
+    }
+    ul.topnav li.icon {
+        float: right;
+        display: inline-block;
+    }
+}
+
+@media screen and (max-width:680px) {
+    ul.topnav.responsive {
+        position: relative;
+    }
+    ul.topnav.responsive li.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    ul.topnav.responsive li {
+        float: none;
+        display: inline;
+    }
+    ul.topnav.responsive li a {
+        display: block;
+        text-align: left;
+    }
+}
+
+@media screen and (min-width:600px) {
+    #about img {
+        float: left;
+        width: 30%;
+        padding: 2%;
+        padding-right: 10%;
+    }
+    #about p {
+        width: 50%;
+        padding: 2%;
+        float: left;
+    }
+    #web {
+        clear: both;
+        width: 100%;
+    }
+    nav {
+        padding-top: 17%;
+        padding-left: 12%
+    }
+}
+
+@media screen and (min-width:800px) {
+    #main {
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+        border-top: 0px solid black;
+    }
+    nav {
+        border-bottom: 8px solid black;
+        border-top: 8px solid black;
+    }
+    #about img {
+        float: left;
+        width: 80%;
+        padding: 5%;
+    }
+    #about p {
+        width: 100%;
+        padding: 2%;
+    }
+    #web {
+        padding: 4%;
+        clear: none;
+    }
+    #main {
+        padding-top: 20px;
+    }
+    #about,
+    #links,
+    #web {
+        padding: 4%;
+        padding-top: 1%;
+        width: 24%;
+        border-top: 0px;
+        float: left;
+    }
+}

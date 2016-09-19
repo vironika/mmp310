@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Homework Assignment 1</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <meta charset="utf-8" />
+</head>
+
+<body>
+
+    <header>
+        <div id="img"></div>
+
+        <!--<img scralt="baner" src="images/morning.png">-->
+
+        <nav>
+            <ul class="topnav" id="myTopnav">
+                <li><a href="#about"> About </a> </li>
+                <li><a href="#links"> Links </a> </li>
+                <li><a href="#web"> Webpage </a> </li>
+                <li><a href="#contactMe"> Contact me </a> </li>
+                <li class="icon">
+                    <a href="javascript:void(0);" style="font-size:20px;" onclick="myFunction()">☰</a>
+                </li>
+
+            </ul>
+        </nav>
+
+
+    </header>
+    <div id="main">
+        <div id="about">
+            <h2>Vironika Chhugani</h3>
+            <p>I'm 26, came to the US 6 years ago. I have two dogs and a husband.
+                <br> Helping to create apps inspired me to learn Multimedia Programing. And I really like it. But I hate to wright a content and don't thing that I'm doing in design.</p>
+            <img alt="my dogs" src="images/IMG_0627.JPG">
+        </div>
+        <div id="links">
+            <h2>Couple of think I have made in the past</h2>
+
+            <ul>
+                <li style="font-size:20px;  text-decoration: none;">Apps I was working on:</li>
+                <ul style="padding-left:10px;">
+                    <li>
+                        <a href="http://www.spotlist.io/" target="_blank">SpotList</a></li>
+                    <li>
+                        <a href="http://web.countup.co/Countup.html" target="_blank">CountUp</a>
+                    </li>
+
+                </ul>
+
+                <li style="font-size:20px;  text-decoration: none;">MMP classes websites</li>
+                <ul style="padding-left:10px;">
+                    <li>
+                        <a href="http://mmp.bmcc.cuny.edu/vironika.lishtvan/woof-woof/index.html" target="_blank">Dog Film Fest</a></li>
+                    <li>
+                        <a href="http://mmp.bmcc.cuny.edu/vironika.lishtvan/mmp200/jazz/index.html" target="_blank">Jazz Fest</a>
+                    </li>
+                    <li>
+                        <a href="http://mmp.bmcc.cuny.edu/vironika.lishtvan/mmp200/final/index.html" target="_blank">BMCC project</a>
+                    </li>
+                </ul>
+
+
+                <li style="font-size:20px;  text-decoration: none;">Other</li>
+                <ul style="padding-left:10px;">
+                    <li>
+                        <a href="http://mmp.bmcc.cuny.edu/vironika.lishtvan/stdg/index.html" target="_blank">Game</a></li>
+                    <li>
+                        <a href="http://mmp.bmcc.cuny.edu/vironika.lishtvan/Vironika.Lishtvan/mus/an/bulb.html" target="_blank">GIF</a>
+                    </li>
+                </ul>
+
+
+
+            </ul>
+
+            </ul>
+        </div>
+        <div id="web">
+            <h2>My favorite website</h2>
+            <p>Probably, I don't really have a favorite one. But the one I like to visit is New York Times website. First of all, I believe that the main reason we do go to any website is to find something. I like the design, while it's loaded with content , white background makes it clean and easy to read. They did a good job of organizing and using short descriptions and thumbnails, that make it easier to go true and find the one you are interested in. Also, I love their graphics!!!
+                <br> However, the website is loaded with advertisements we all hate. But what do - you get what you pay for - means "didn't pay". </p>
+        </div>
+        <div id="contactMe">
+            <h2>Contact me</h2> Email:
+            <input id="email" type="email" placeholder="Imput email" /> Name:
+            <input id="name" type="text" placeholder="Input name" />
+            <button id="submit">
+                <input type="submit">
+            </button>
+            <p id="message"></p>
+        </div>
+
+    </div>
+</body>
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+</script>
+
+
+<script>
+    function getStylesheet() {
+        var currentTime = new Date().getHours();
+        if (0 <= currentTime && currentTime < 5) {
+            document.write("<link rel='stylesheet' href='night.css' type='text/css'>");
+        }
+        if (5 <= currentTime && currentTime < 18) {
+            document.write("<link rel='stylesheet' href='day.css' type='text/css'>");
+        }
+
+        if (18 <= currentTime && currentTime <= 24) {
+            document.write("<link rel='stylesheet' href='night.css' type='text/css'>");
+        }
+    }
+
+    getStylesheet();
+</script>
+<script>
+    submit.onclick = function () {
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        console.log(name, email);
+        var message = document.getElementById("message");
+
+        message.innerHTML = "Hello " + name + ", thanks for contacting me. I will reply to your " + email + " email as soon as posible";
+    };
+</script>
+
+<noscript>
+    <link href="main.css" rel="stylesheet">
+</noscript>
+
+
+
+
+
+
+
+</html>
