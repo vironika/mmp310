@@ -39,7 +39,6 @@ document.getElementById("score").innerHTML = " Your score is:<br>  <br>" + score
 function timer() {
 
     count = count - 1;
-    //    var secs = count;
     document.getElementById("timer").innerHTML = "Timer:<br><br>" + count + " secs"; // shows count
 
     if (count <= 0) {
@@ -69,7 +68,7 @@ b.addEventListener("click", function () {
     $('#myCanvas').css('background-image', 'url("images/' + arrayPhoto[iPhoto] + '")');
 
 
-    //start new timer
+    
 
 
     //pass new values for coordinats of the next slide
@@ -78,12 +77,14 @@ b.addEventListener("click", function () {
 
     console.log("x = " + x);
     console.log("y = " + y);
-
+    
+    //clear old timer
     clearInterval(counter);
+    //start new timer
     timeAgain();
 
 
-    console.log(" console.log(iAnimal" + iAnimal);
+    //check if slides are done
     if (iAnimal >= 7) {
         $("#main").hide();
         $("#finish").show();
@@ -112,12 +113,14 @@ function timeAgain() {
 
 var c = document.querySelector("#myCanvas"); //Button with ID button
 c.addEventListener("click", function () {
-
+    
+    //spot function have locations of spots of animals
     spot(x, y);
 });
 
 
-
+//find mouse coordinates on canvas
+//was found on http://www.chestysoft.com/imagefile/javascript/get-coordinates.asp
 function FindPosition(oElement) {
     if (typeof (oElement.offsetParent) != "undefined") {
         for (var posX = 0, posY = 0; oElement; oElement = oElement.offsetParent) {
@@ -153,7 +156,7 @@ function GetCoordinates(e) {
     document.getElementById("x").innerHTML = PosX;
     document.getElementById("y").innerHTML = PosY;
 }
-
+//here we calculate how fur from the spot the mouse click was
 function spot(spX, spY) {
     var animalX = spX;
     var animalY = spY;
@@ -163,8 +166,10 @@ function spot(spX, spY) {
     if (count > 0 && loc < 30) {
         if (count > 0 && loc > -30) {
             score++;
+            //stop timer
             clearInterval(counter);
             document.getElementById("score").innerHTML = " Your score is:<br>  <br>" + score + "/7"; // shows count
+            //drow a sircle
             str();
         }
     }
@@ -183,11 +188,3 @@ function str() {
 
 }
 
-
-
-
-
-
-
-
-//var counter = setInterval(timer, 1000); //1000 will  run it every 1 second
