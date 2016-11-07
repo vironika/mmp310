@@ -4,8 +4,9 @@
 */
         
         body {
-            padding-left: 5%;
-            padding-right: 5%;
+            width: 100%;
+            padding-left: 10%;
+            padding-right: 10%;
             text-align: center;
             background: #415c61;
             font-family: sans-serif;
@@ -15,7 +16,7 @@
         }
         
         h1 {
-            padding: 2%;
+            padding: auto 2%;
             color: #94ddea;
             font-weight: 100;
             font-size: 40px;
@@ -34,19 +35,14 @@
         }
         
         #start {
-            width: 100%;
+            width: 80%;
             align-content: center;
-        }
-        
-        #timer {
-            width: 25%;
-            width: 300px;
         }
         
         #1,
         #cnv,
         #3 {
-            float: left;
+            float: inherit;
             width: 30%;
         }
         
@@ -56,13 +52,13 @@
         }
         
         canvas {
-            margin-left: 150px;
-            margin-right: 150px;
+            margin-left: 100px;
+            margin-right: 100px;
             background-image: url(images/o.jpg);
         }
         
         #finish {
-            width: 100%;
+            width: 80%;
         }
         
         #button {
