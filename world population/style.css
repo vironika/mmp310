@@ -1,0 +1,145 @@
+/*  Vironika Chhugani
+    MMP310
+    12/19/2016
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {}
+
+svg {
+    width: 100%;
+    font: 10px sans-serif;
+}
+
+.y.axis path {
+    display: none;
+}
+
+.y.axis line {
+    stroke: #fff;
+    stroke-opacity: .2;
+    shape-rendering: crispEdges;
+}
+
+.y.axis .zero line {
+    stroke: #000;
+    stroke-opacity: 1;
+}
+
+rect {
+    fill-opacity: .6;
+    fill: #e377c2;
+}
+
+rect:first-child {
+    fill: #1f77b4;
+}
+
+.bar {
+    fill: steelblue;
+}
+
+.bar:hover {
+    fill: brown;
+}
+
+.axis {
+    font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.btp {
+    padding-top: 38px;
+}
+
+.bt {
+    background: #2484c1;
+    background: -webkit-linear-gradient(#2484c1, #1B5A82);
+    background: linear-gradient(#2484c1, #1B5A82);
+    border-radius: 1px;
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    padding: 2% 3%;
+}
+
+p {
+    border-left: thick solid white;
+    padding-left: 4%;
+    margin-top: 50px;
+    font-size: 1.5em;
+    color: dimgray;
+}
+
+.col-md-3 {
+    margin-bottom: 20px;
+}
+
+span {
+    font-size: 1.4em;
+}
+
+#p0_segmentPercentage4-inner {
+    padding-bottom: 51px!important;
+}
+
+.row {
+    background-color: white;
+    width: 100%;
+    margin: 0;
+    padding: 2%;
+}
+
+.top {
+    padding-top: 50px;
+    margin: 0;
+    background: -webkit-linear-gradient( #CCC254, white);
+    background: linear-gradient( #CCC254, white);
+}
+
+#srch {
+    background-color: #CCC254;
+    color: ghostwhite;
+    width: 100%;
+    padding: 2%;
+    margin: 0;
+}
+
+.container-fluid {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+h3 {  padding-left: 2%;}
+
+input {
+    border: thick solid #CCC254;
+    padding: 1%;
+}
+
+h1 {
+      padding: 2%;
+    color: #1B5A82
+}
+#prf{
+height: 50px;
+  
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #1B5A82;
+    color: white;
+    padding: 5px;
+}
