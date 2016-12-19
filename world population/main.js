@@ -14,7 +14,7 @@ var allpop = 0;
 var pie = new d3pie("pieChart", {
     "header": {
         "title": {
-            "text": "World Population by Continent"
+            "text": "World 1 Population by Continent"
             , "fontSize": 30
             , "font": "open sans"
             ,"color": "#1B5A82"
@@ -94,33 +94,40 @@ var pie = new d3pie("pieChart", {
     }
 });
 
-//create search by input values 
+//create search by  
 function popSearch() {
-    //scroll to search results
+    
      location.href = "#results";
     var searchName = document.getElementById("searchName").value
     var searchYear = document.getElementById("searchYear").value
     var searchAge = document.getElementById("searchAge").value
-    
-    //display results
-    document.getElementById("results").innerHTML = ""
+        //display results
+    document.getElementById("results").innerHTML = "";
+    //remove bar chart from previous search
+    d3.select("svg").remove();
     
         //get json
     $.ajax({
         url: 'http://api.population.io/1.0/population/' + searchYear + '/' + searchName + '/' + searchAge + '/'
         , dataType: "json"
         , success: function (data) {
+               
                for (var i = 0; i < data.length; i++) {
                         var newData = data[i]
-                        //show data on screen
+
                         document.getElementById('results').innerHTML +=
 
                             "<h1>Population of " + searchName + " for " + searchAge + " years old: " + newData.total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "</h1>" +
 
                             "<h2> Males: " + newData.males.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " </h2>" +
                             "<h2> Females: " + newData.females.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " </h2>" + "<hr>"
+
+
+
                     }
-        
+            //
+            //get input values
+            
             // set the dimensions of the canvas
             var margin = {
                     top: 20
@@ -144,14 +151,17 @@ function popSearch() {
                 , dataType: "json"
                 , success: function (data) {
                     
+                    allpop = 0;
                     data.forEach(function (d) {
                         d.age = d.age;
                         d.total = +d.total;
-                        //calculate total population
                         allpop = allpop + d.total;
-                    
                     });
-                    document.getElementById('results2').innerHTML += "<h1>Total population of " + searchName + " by age 1 to 100: " +
+                    
+                    console.log("allpop os " + allpop.toString());   
+                    document.getElementById("results2").innerHTML = "";
+                    console.log("hello");
+                    document.getElementById('results2').innerHTML = "<h1>Total population of " + searchName + " by age 1 to 100: " +
                     allpop.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "</h1>"
                         // scale the range of the data
                     x.domain(data.map(function (d) {
@@ -211,7 +221,6 @@ function popSearch() {
     
 }
 var x = document.getElementById("calculate")
-//run search on click 
 x.addEventListener("click", popSearch, false)
 
 $('.container-fluid').addClass('animated zoomIn'); 
