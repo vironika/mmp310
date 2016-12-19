@@ -14,7 +14,7 @@ var allpop = 0;
 var pie = new d3pie("pieChart", {
     "header": {
         "title": {
-            "text": "World 1 Population by Continent"
+            "text": "World Population by Continent"
             , "fontSize": 30
             , "font": "open sans"
             ,"color": "#1B5A82"
